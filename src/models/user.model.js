@@ -83,9 +83,9 @@ userSchema.methods.generateRefreshToken=function(){
             _id:this._id,
             
         },
-        process.env.32,
+        process.env.REFERESH_TOKEN_SECRET,
         {
-            expiresIn:process.env.REFERESH_TOKEN_SECRET
+            expiresIn:process.env.REFERESH_TOKEN_EXPIRY
         }
     )
 }
